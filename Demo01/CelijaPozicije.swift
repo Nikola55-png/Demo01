@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class CelijaPozicije: UITableViewCell {
 
@@ -30,5 +31,12 @@ class CelijaPozicije: UITableViewCell {
     
     @IBOutlet weak var slika: UIImageView!
     
+    func postaviSliku(_ urlString: String) {
+            guard let url = URL(string: urlString) else {
+                return
+            }
+
+            slika.af.setImage(withURL: url)
+        }
     
 }

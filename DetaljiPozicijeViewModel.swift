@@ -18,6 +18,9 @@ class DetaljiPozicijeViewModel {
         let branchObjekat = BranchUniversalObject(canonicalIdentifier: "itemId = \(pozicija.naziv)")
         branchObjekat.title = pozicija.naziv
         branchObjekat.imageUrl = pozicija.slika
+        
+        branchObjekat.contentMetadata.customMetadata["pozicijaNaziv"] = pozicija.naziv
+        branchObjekat.contentMetadata.customMetadata["pozcijaSlika"] = pozicija.slika
         branchObjekat.contentMetadata.customMetadata["plata"] = pozicija.plata
         
         

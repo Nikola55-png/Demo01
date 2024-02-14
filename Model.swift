@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Pozicija {
+struct Pozicija: Decodable {
     let slika: String
     let naziv: String
     let plata: String

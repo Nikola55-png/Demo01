@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Branch
 
 class DetaljiVC: UIViewController {
     
@@ -15,6 +16,7 @@ class DetaljiVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
     }
     
     @IBOutlet weak var image: UIImageView!
@@ -35,7 +37,12 @@ class DetaljiVC: UIViewController {
     }
     
     func share () {
-        
+        if let brancLink = viewModel.kreirajBrancLink() {
+            let activityVC = UIActivityViewController(activityItems: [brancLink], applicationActivities: nil)
+            present(activityVC, animated: true, completion: nil)
+        }
     }
+    
+    
     
 }

@@ -20,6 +20,7 @@
 		812DA8F82B7D28E5009F73DE /* CelijaPozicije.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DA8F72B7D28E5009F73DE /* CelijaPozicije.swift */; };
 		812DA8FA2B7D2E9D009F73DE /* ListaPozicijaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DA8F92B7D2E9D009F73DE /* ListaPozicijaViewModel.swift */; };
 		812DA8FC2B7D2EFD009F73DE /* DetaljiPozicijeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812DA8FB2B7D2EFD009F73DE /* DetaljiPozicijeViewModel.swift */; };
+		812DA8FF2B7D4ACA009F73DE /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 812DA8FE2B7D4ACA009F73DE /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 			files = (
 				812DA8EF2B7D23B4009F73DE /* Branch in Frameworks */,
 				812DA8F22B7D2494009F73DE /* Alamofire in Frameworks */,
+				812DA8FF2B7D4ACA009F73DE /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +107,7 @@
 			packageProductDependencies = (
 				812DA8EE2B7D23B4009F73DE /* Branch */,
 				812DA8F12B7D2494009F73DE /* Alamofire */,
+				812DA8FE2B7D4ACA009F73DE /* AlamofireImage */,
 			);
 			productName = Demo01;
 			productReference = 812DA8D42B7D2157009F73DE /* Demo01.app */;
@@ -137,6 +140,7 @@
 			packageReferences = (
 				812DA8ED2B7D23B4009F73DE /* XCRemoteSwiftPackageReference "branch.io" */,
 				812DA8F02B7D2494009F73DE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				812DA8FD2B7D4ACA009F73DE /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 812DA8D52B7D2157009F73DE /* Products */;
 			projectDirPath = "";
@@ -406,6 +410,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		812DA8FD2B7D4ACA009F73DE /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -418,6 +430,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 812DA8F02B7D2494009F73DE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		812DA8FE2B7D4ACA009F73DE /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 812DA8FD2B7D4ACA009F73DE /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
