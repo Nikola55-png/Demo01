@@ -5,16 +5,30 @@
 //  Created by Nikola Ilic on 14.2.24..
 //
 
-import Foundation
+import Branch
 
 class DetaljiPozicijeViewModel {
     var pozicijaDetalji: PozicijaDetalji?
     
-    func kreirajShare () -> String? {
+    func kreirajBrancLink () -> String? {
         guard let pozicija = pozicijaDetalji?.pozicija else {
             return nil
         }
         
-        return ""
+        let branchObjekat = BranchUniversalObject(canonicalIdentifier: "itemId = \(pozicija.naziv)")
+        branchObjekat.title = pozicija.naziv
+        branchObjekat.imageUrl = pozicija.slika
+        branchObjekat.contentMetadata.customMetadata["plata"] = pozicija.plata
+        
+        
+        let linkPropertiji = BranchLinkProperties()
+        linkPropertiji.feature = "share"
+        linkPropertiji.addControlParam("$desktop_url", withValue: "")
+        
+        
+        let shareOpcije = BranchActivityItemProvider(placeholderItem: BranchShareLink(universalObject: branchObjekat, linkProperties: linkPropertiji))
+        let activityVC = UIActivityViewController(activityItems: [shareOpcije], applicationActivities: nil)
+        
+        return nil
     }
 }

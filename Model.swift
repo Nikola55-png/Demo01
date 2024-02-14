@@ -12,13 +12,13 @@ struct Pozicija {
     let slika: String
     let naziv: String
     let plata: String
-    let tehnologije: [String]
     
-    init(slika: String, naziv: String, plata: String, tehnologije: [String]) {
+    
+    init(slika: String, naziv: String, plata: String) {
         self.slika = slika
         self.naziv = naziv
         self.plata = plata
-        self.tehnologije = tehnologije
+        
     }
 }
 
