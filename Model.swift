@@ -22,16 +22,9 @@ struct Pozicija {
     }
 }
 
-
-struct DetaljiPozicije {
-    let pozicija: [Pozicija]
-    let opis: String
+struct PozicijaDetalji {
+    let pozicija: Pozicija
+    let tehnologije: [String]
+    let opisPozicije: String
     let opisFirme: String
-    
-    init(pozicija: [Pozicija], opis: String, opisFirme: String) {
-        self.pozicija = pozicija
-        self.opis = opis
-        self.opisFirme = opisFirme
-    }
-    
 }

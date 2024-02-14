@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var viewModel = ListaPozicijaViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
