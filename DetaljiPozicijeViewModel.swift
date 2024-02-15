@@ -24,6 +24,7 @@ class DetaljiPozicijeViewModel {
         branchObjekat.contentMetadata.customMetadata["plata"] = pozicija.plata
         
         
+        
         let linkPropertiji = BranchLinkProperties()
         linkPropertiji.feature = "share"
         linkPropertiji.addControlParam("$desktop_url", withValue: "")

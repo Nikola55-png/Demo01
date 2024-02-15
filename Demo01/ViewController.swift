@@ -16,15 +16,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view.
         self.tabela.dataSource = self
         self.tabela.delegate = self
+        
         viewModel.dohvatiPodatke {
-                    self.tabela.reloadData()
+                    DispatchQueue.main.async {
+                        self.tabela.reloadData()
+                    }
                 }
     }
 
     @IBOutlet weak var tabela: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.pozicija.count
+        return viewModel.pozicijeDetalji.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,14 +35,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("Nemoguće dohvatiti celiju")
         }
 
-        let pozicija = viewModel.pozicija[indexPath.row]
-        cell.nazivFirmeLbl.text = pozicija.naziv
-        cell.plataLbl.text = pozicija.plata
-        cell.postaviSliku(pozicija.slika)
+        let pozicijaDetalji = viewModel.pozicijeDetalji[indexPath.row]
+        cell.nazivFirmeLbl.text = pozicijaDetalji.pozicija.naziv
+        cell.plataLbl.text = pozicijaDetalji.pozicija.plata
+        cell.postaviSliku(pozicijaDetalji.pozicija.slika)
 
         return cell
     }
-
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detaljiVC = storyboard?.instantiateViewController(withIdentifier: "DetaljiVC") as! DetaljiVC
+        detaljiVC.viewModel.pozicijaDetalji = viewModel.pozicijeDetalji[indexPath.row]
+        navigationController?.pushViewController(detaljiVC, animated: true)
+    }
+
+
 }
 

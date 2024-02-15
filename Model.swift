@@ -22,7 +22,7 @@ struct Pozicija: Decodable {
     }
 }
 
-struct PozicijaDetalji {
+struct PozicijaDetalji: Decodable {
     let pozicija: Pozicija
     let tehnologije: [String]
     let opisPozicije: String

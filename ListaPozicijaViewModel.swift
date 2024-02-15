@@ -9,19 +9,20 @@ import Foundation
 import Alamofire
 
 class ListaPozicijaViewModel {
-    var pozicija: [Pozicija] = []
-    
+    var pozicijeDetalji: [PozicijaDetalji] = []
+
     func dohvatiPodatke(completion: @escaping () -> Void) {
-        AF.request(url).responseDecodable(of: [Pozicija].self) { response in
+        AF.request(url).responseDecodable(of: [PozicijaDetalji].self) { response in
             switch response.result {
-            case .success(let pozicije):
-                self.pozicija = pozicije
+            case .success(let pozicijeDetalji):
+                self.pozicijeDetalji = pozicijeDetalji
                 completion()
             case .failure(let error):
                 print("Greška prilikom dohvatanja podataka: \(error.localizedDescription)")
             }
         }
     }
-    
-    let url = "https://cd00f355ac8d4a77a328f02229680d8c.api.mockbin.io/"
+
+    let url = "https://link-to-your-mockbin-data"
 }
+

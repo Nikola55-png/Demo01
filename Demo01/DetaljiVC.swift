@@ -16,7 +16,20 @@ class DetaljiVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        prikazi()
+        
+            }
        
+    func prikazi () {
+        if let detalji = viewModel.pozicijaDetalji {
+                    nazivPozicije.text = detalji.pozicija.naziv
+                    rangPlate.text = detalji.pozicija.plata
+                    image.af.setImage(withURL: URL(string: detalji.pozicija.slika)!)
+                    spisakTehnologija.text = detalji.tehnologije.joined(separator: ", ")
+                    opisPozicije.text = detalji.opisPozicije
+                    opisKompanije.text = detalji.opisFirme
+                }
+        
     }
     
     @IBOutlet weak var image: UIImageView!
