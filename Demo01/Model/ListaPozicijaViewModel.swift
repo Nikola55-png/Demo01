@@ -23,6 +23,6 @@ class ListaPozicijaViewModel {
         }
     }
 
-    let url = "https://link-to-your-mockbin-data"
+    let url = "https://3facafe67f0f4c1aa354290968b24481.api.mockbin.io/"
 }
 

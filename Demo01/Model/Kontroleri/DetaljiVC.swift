@@ -17,6 +17,9 @@ class DetaljiVC: UIViewController {
 
         // Do any additional setup after loading the view.
         prikazi()
+   
+
+
         
             }
        
@@ -55,6 +58,14 @@ class DetaljiVC: UIViewController {
             present(activityVC, animated: true, completion: nil)
         }
     }
+    
+  
+    
+
+    
+
+    
+
     
     
     

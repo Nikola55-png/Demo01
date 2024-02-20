@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.nikolailic.Demo01</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>demo01</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -21,5 +34,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>branch_key</key>
+	<string></string>
+	<key>live</key>
+	<string>key_live_jrmt1q73aPG7enIAKVwMqkojqyktXdfO</string>
+	<key>test</key>
+	<string>key_test_pvhF8sY8kLN7haJxKRsIRbnkvBcs3jmZ</string>
 </dict>
 </plist>

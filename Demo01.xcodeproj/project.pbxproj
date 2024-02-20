@@ -37,6 +37,7 @@
 		812DA8F72B7D28E5009F73DE /* CelijaPozicije.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelijaPozicije.swift; sourceTree = "<group>"; };
 		812DA8F92B7D2E9D009F73DE /* ListaPozicijaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPozicijaViewModel.swift; sourceTree = "<group>"; };
 		812DA8FB2B7D2EFD009F73DE /* DetaljiPozicijeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaljiPozicijeViewModel.swift; sourceTree = "<group>"; };
+		812DA9002B8261A6009F73DE /* Demo01.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo01.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +57,6 @@
 		812DA8CB2B7D2157009F73DE = {
 			isa = PBXGroup;
 			children = (
-				812DA8EB2B7D2262009F73DE /* Model.swift */,
-				812DA8F92B7D2E9D009F73DE /* ListaPozicijaViewModel.swift */,
-				812DA8FB2B7D2EFD009F73DE /* DetaljiPozicijeViewModel.swift */,
 				812DA8D62B7D2157009F73DE /* Demo01 */,
 				812DA8D52B7D2157009F73DE /* Products */,
 			);
@@ -75,17 +73,37 @@
 		812DA8D62B7D2157009F73DE /* Demo01 */ = {
 			isa = PBXGroup;
 			children = (
+				812DA9012B84C966009F73DE /* Model */,
+				812DA9002B8261A6009F73DE /* Demo01.entitlements */,
 				812DA8D72B7D2157009F73DE /* AppDelegate.swift */,
 				812DA8D92B7D2157009F73DE /* SceneDelegate.swift */,
-				812DA8DB2B7D2157009F73DE /* ViewController.swift */,
 				812DA8DD2B7D2157009F73DE /* Main.storyboard */,
 				812DA8F72B7D28E5009F73DE /* CelijaPozicije.swift */,
-				812DA8F52B7D27D2009F73DE /* DetaljiVC.swift */,
 				812DA8E02B7D2159009F73DE /* Assets.xcassets */,
 				812DA8E22B7D2159009F73DE /* LaunchScreen.storyboard */,
 				812DA8E52B7D2159009F73DE /* Info.plist */,
 			);
 			path = Demo01;
+			sourceTree = "<group>";
+		};
+		812DA9012B84C966009F73DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				812DA8EB2B7D2262009F73DE /* Model.swift */,
+				812DA8F92B7D2E9D009F73DE /* ListaPozicijaViewModel.swift */,
+				812DA8FB2B7D2EFD009F73DE /* DetaljiPozicijeViewModel.swift */,
+				812DA9022B84C9A8009F73DE /* Kontroleri */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		812DA9022B84C9A8009F73DE /* Kontroleri */ = {
+			isa = PBXGroup;
+			children = (
+				812DA8DB2B7D2157009F73DE /* ViewController.swift */,
+				812DA8F52B7D27D2009F73DE /* DetaljiVC.swift */,
+			);
+			path = Kontroleri;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +339,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Demo01/Demo01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GVC3D32364;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -348,8 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Demo01/Demo01.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GVC3D32364;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Demo01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
